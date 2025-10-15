@@ -1,1 +1,1 @@
-{"usuario":[{"nome":"maria","idade":17,"email":"exemplo@gmail.com"},{"nome":"pedro","idade":17,"email":"exemplo@gmail.com"}]}
+{"usuario":[{"nome":"maria","idade":17,"email":"exemplo@gmail.com"},{"nome":"pedro","idade":17,"email":"exemplo@gmail.com"}],"produto":[{"nome":"mouse","valor":80,"descricao":"Mouse gamer sem fio."},{"nome":"mouse","valor":80,"descricao":"Mouse gamer sem fio."},{"nome":"teclado","valor":300,"descricao":"Teclado mecanico gamer sem fio."}]}
