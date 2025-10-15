@@ -1,21 +1,22 @@
 import express from "express"
+import { Database } from "./databases.js"
 const app = express()
 app.use(express.json())
 
-const usuarios = []
-
+const database = new Database()
 app.get('/', (req, res) => {
     res.send("Você está na página principal")
 })
 
 app.get('/usuario', (req, res) => {
-    res.status(200).json(usuarios)
+    const data = database.select("usuarios")
+    res.status(200).json(data)
 })
 
 app.post('/usuario', (req, res) => {
     const {nome, idade, email} = req.body
     if (nome, idade, email){
-        usuarios.push({nome, idade, email})
+        database.insert("usuario", {nome, idade, email})
         return res.status(201).send("Usuário Criado")
     }
 
