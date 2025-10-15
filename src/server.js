@@ -13,10 +13,14 @@ app.get('/usuario', (req, res) => {
 })
 
 app.post('/usuario', (req, res) => {
-    const {nome, idade} = req.body
-    usuarios.push({nome, idade})
-    console.log(usuarios)
-    res.status(201).send("Usuário Criado")
+    const {nome, idade, email} = req.body
+    if (nome, idade, email){
+        usuarios.push({nome, idade, email})
+        return res.status(201).send("Usuário Criado")
+    }
+
+    return res.status(400).send("Informações inválidas")
+
 })
 
 app.listen(3333, () => {
