@@ -40,6 +40,10 @@ app.post('/produto', (req, res) => {
 
 })
 
+mongoose.connect("mongodb://localhost...")
+    .then(() => console.log("Conectado ao banco"))
+    .catch((e)) => console.log("Erro ao conctar ao banco"))
+
 app.listen(3333, () => {
     console.log("Servidor rodando na porta em http://localhost:3333")
 })
